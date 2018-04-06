@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { SignupPage } from './signup';
+import { ViewChild } from '@angular/core';
+import { Slides } from 'ionic-angular';
 
 
 @NgModule({
@@ -11,4 +13,11 @@ import { SignupPage } from './signup';
     IonicPageModule.forChild(SignupPage),
   ],
 })
-export class SignupPageModule {}
+export class SignupPageModule {
+  
+  @ViewChild(Slides) slides: Slides;
+
+  goToSlide() {
+    this.slides.slideTo(2, 500);
+  }
+}

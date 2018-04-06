@@ -8,22 +8,26 @@
 <ion-content padding>
   <h1>
     Please select your native language:
-    </h1>
-  <ion-select>
-    <ion-option *ngFor="let cc of languages" value="{{ cc }}">
-      <span class='flag-icon flag-icon-gb {{ cc.slice(0, -1) }}'></span>
-        {{ cc }}
+  </h1>
+  <ion-item>
+  <ion-select [(ngModel)]= 'nativeLanguage'>
+    <ion-option *ngFor="let ciao of languages" value="{{ ciao }}">
+      <span class='flag-icon flag-icon-gb {{ ciao.slice(0, -1) }}'></span>
+        {{ ciao }}
     </ion-option>
   </ion-select>
+</ion-item>
 
   <h1>
     Please select the language you would like to learn:
   </h1>
-  <ion-select>
-    <ion-option *ngFor="let cc of languages" value="{{ cc }}">
+  <ion-item>
+    <ion-select [(ngModel)]= 'learnLanguage'>
+    <ion-option *ngFor="let cc of learnings" value="{{ cc }}">
       <span class='flag-icon flag-icon-{{ cc.slice(0, -1) }}'></span>
       {{ cc }}
     </ion-option>
   </ion-select>
+</ion-item>
 
 </ion-content>

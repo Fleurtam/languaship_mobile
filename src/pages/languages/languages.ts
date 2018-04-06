@@ -10,6 +10,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class LanguagesPage {
 
   languages: any
+  learnings: any
+  nativeLanguage: any
+  learnLanguage: any
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
@@ -21,7 +24,17 @@ export class LanguagesPage {
           'SWEDISH',
           'FRENCH'
     ]
+
+    this.learnings =[
+          'ENGLISH',
+          'SPANISH',
+          'ITALIAN',
+          'DUTCH',
+          'SWEDISH',
+          'FRENCH'
+    ]
   }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad LanguagesPage');
     }
