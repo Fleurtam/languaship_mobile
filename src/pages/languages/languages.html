@@ -1,12 +1,29 @@
+
 <ion-header>
-
-    <ion-navbar>
-        <ion-title>languages</ion-title>
-    </ion-navbar>
-
+  <ion-navbar>
+    <ion-title>LANGUAGES</ion-title>
+  </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
+  <h1>
+    Please select your native language:
+    </h1>
+  <ion-select>
+    <ion-option *ngFor="let cc of languages" value="{{ cc }}">
+      <span class='flag-icon flag-icon-gb {{ cc.slice(0, -1) }}'></span>
+        {{ cc }}
+    </ion-option>
+  </ion-select>
+
+  <h1>
+    Please select the language you would like to learn:
+  </h1>
+  <ion-select>
+    <ion-option *ngFor="let cc of languages" value="{{ cc }}">
+      <span class='flag-icon flag-icon-{{ cc.slice(0, -1) }}'></span>
+      {{ cc }}
+    </ion-option>
+  </ion-select>
 
 </ion-content>
